@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa História - 5 Meses de Puro Amor</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Outfit:wght@300;400;600;700;900&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Canvas for Soft Floating Hearts & Gold Stars -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Main Wrapper -->
+    <main class="app-container">
+        
+        <!-- HERO / HEADER SECTION -->
+        <header class="hero-section">
+            <div class="hero-content">
+                <div class="heart-pulse-container">
+                    <svg class="heart-iconPulse" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                </div>
+                <h1 class="hero-title">Nossa Trajetória</h1>
+                <p class="hero-subtitle">Celebrando cada instante ao seu lado nos últimos 5 meses</p>
+                
+                <!-- Countdown/Countup Timer Card -->
+                <div class="timer-container glass-card">
+                    <h2 class="timer-title">Estamos juntos há:</h2>
+                    <div class="timer-grid">
+                        <div class="timer-unit">
+                            <span id="months" class="timer-number">00</span>
+                            <span class="timer-label">Meses</span>
+                        </div>
+                        <div class="timer-unit">
+                            <span id="days" class="timer-number">00</span>
+                            <span class="timer-label">Dias</span>
+                        </div>
+                        <div class="timer-unit">
+                            <span id="hours" class="timer-number">00</span>
+                            <span class="timer-label">Horas</span>
+                        </div>
+                        <div class="timer-unit">
+                            <span id="minutes" class="timer-number">00</span>
+                            <span class="timer-label">Minutos</span>
+                        </div>
+                        <div class="timer-unit">
+                            <span id="seconds" class="timer-number">00</span>
+                            <span class="timer-label">Segundos</span>
+                        </div>
+                    </div>
+                    <div class="timer-footer">Desde 23/12/2025</div>
+                </div>
+                
+                <!-- Scroll Indicator -->
+                <div class="scroll-indicator" onclick="scrollToTimeline()">
+                    <span>Role para ver nossa história</span>
+                    <svg class="arrow-down-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 14l-7 7-7-7M12 21V3"/>
+                    </svg>
+                </div>
+            </div>
+        </header>
+
+        <!-- TIMELINE SECTION -->
+        <section id="timeline-section" class="timeline-section">
+            <h2 class="section-title">Nossa Timeline</h2>
+            <p class="section-subtitle">A linha do tempo do nosso amor, desde as conversas até hoje... e além</p>
+            
+            <div class="timeline-container">
+                <!-- Vertical Line -->
+                <div class="timeline-line"></div>
+                
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content-wrapper">
+                        <div class="timeline-date">04 de Setembro de 2025</div>
+                        <div class="timeline-card polaroid">
+                            <div class="card-image-container">
+                                <img src="momento1.jpeg" alt="O início de tudo" class="card-image" loading="lazy" onclick="openLightbox(this)" onerror="this.style.opacity='0'; this.style.pointerEvents='none';">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">O Início de Tudo</h3>
+                                <p class="card-text">
+                                    Tudo começou com as primeiras conversas pelo WhatsApp. A gente ainda tímidos e desconfiados, mas já sentindo aquela conexão especial. Cada mensagem trocada era um passo a mais para o que viria a ser o nosso amor.
+                                </p>
+                                <div class="polaroid-caption">Conversando na tela... 📱</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content-wrapper">
+                        <div class="timeline-date">06 de Setembro de 2025</div>
+                        <div class="timeline-card polaroid">
+                            <div class="card-image-container">
+                                <img src="momento2.jpeg" alt="Primeiro beijo" class="card-image" loading="lazy" onclick="openLightbox(this)" onerror="this.style.opacity='0'; this.style.pointerEvents='none';">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Nervosismo & O Primeiro Beijo</h3>
+                                <p class="card-text">
+                                    O dia na Expoema. Fomos no brinquedo Samba e na roda gigante. Estávamos tão nervosos que quase não nos falamos! Mas a timidez deu lugar à mágica quando, dentro do carro ao te deixar em casa, nos demos nosso primeiro beijo.
+                                </p>
+                                <div class="polaroid-caption">Naquele carro, o primeiro de muitos... 🚗❤️</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content-wrapper">
+                        <div class="timeline-date">Outubro de 2025</div>
+                        <div class="timeline-card polaroid">
+                            <div class="card-image-container">
+                                <img src="momento3.jpeg" alt="Escolhendo nós dois" class="card-image" loading="lazy" onclick="openLightbox(this)" onerror="this.style.opacity='0'; this.style.pointerEvents='none';">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Escolhendo Nós Dois</h3>
+                                <p class="card-text">
+                                    Passamos por momentos muito delicados no mês de outubro, apenas uma semana antes do meu aniversário. Mas, diante das dificuldades, escolhemos a cumplicidade. Decidimos continuar nos conhecendo e nos escolhendo, o que só serviu para nos aproximar e nos fortalecer ainda mais.
+                                </p>
+                                <div class="polaroid-caption">Superando e ficando mais fortes... 💪✨</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content-wrapper">
+                        <div class="timeline-date">23 de Dezembro de 2025</div>
+                        <div class="timeline-card polaroid">
+                            <div class="card-image-container">
+                                <img src="momento4.jpeg" alt="Pedido oficial" class="card-image" loading="lazy" onclick="openLightbox(this)" onerror="this.style.opacity='0'; this.style.pointerEvents='none';">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">O Pedido Oficial</h3>
+                                <p class="card-text">
+                                    O dia em que eu decidi que queria te amar para sempre. Naquele dia, te pedi em namoro oficialmente, e você disse sim! Foi o momento mais feliz da minha vida, o início do nosso "nós" e a certeza de que estávamos destinados a ficar juntos.
+                                </p>
+                                <div class="polaroid-caption">O início oficial da gente! 💍❤️</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 5 -->
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content-wrapper">
+                        <div class="timeline-date">Janeiro de 2026</div>
+                        <div class="timeline-card polaroid">
+                            <div class="card-image-container">
+                                <img src="momento5.jpeg" alt="Viagem para Bitupitá" class="card-image" loading="lazy" onclick="openLightbox(this)" onerror="this.style.opacity='0'; this.style.pointerEvents='none';">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Nossa Vida em Bitupitá</h3>
+                                <p class="card-text">
+                                    Nossa viagem inesquecível para a casa do seu avô em Bitupitá - CE. Passamos quase um mês dormindo e acordando na mesma casa, experimentando a deliciosa sensação de morarmos juntos. Dias cheios de descobertas, risadas, carinho e memórias eternas.
+                                </p>
+                                <div class="polaroid-caption">Acordar com você é a melhor rotina... 🌅🏡</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 6 (1 Month - Jan 23) -->
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content-wrapper">
+                        <div class="timeline-date">23 de Janeiro de 2026</div>
+                        <div class="timeline-card polaroid">
+                            <div class="card-image-container">
+                                <img src="momento6.jpeg" alt="1 Mês de Namoro" class="card-image" loading="lazy" onclick="openLightbox(this)" onerror="this.style.opacity='0'; this.style.pointerEvents='none';">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">1 Mês - Bodas de Beijinho</h3>
+                                <div class="card-editable-area">
+                                    <p class="card-text">Nosso primeiro mês, meu amor, quem diria, eu e você juntos, ainda estava sem acreditar que EU era o SEU namorado e VOCÊ era a minha namorada!</p>
+                                </div>
+                                <div class="polaroid-caption">Nosso primeiro mês! 🍬✨</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 7 (2 Months - Feb 23) -->
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content-wrapper">
+                        <div class="timeline-date">23 de Fevereiro de 2026</div>
+                        <div class="timeline-card polaroid">
+                            <div class="card-image-container">
+                                <img src="momento7.jpeg" alt="2 Meses de Namoro" class="card-image" loading="lazy" onclick="openLightbox(this)" onerror="this.style.opacity='0'; this.style.pointerEvents='none';">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">2 Meses - Bodas de Sorvete</h3>
+                                <div class="card-editable-area">
+                                    <p class="card-text">Como o sorvete eu estava, derretendo de amor, por estar no calor do teu amor, do teus abraços e da tua risada!</p>
+                                </div>
+                                <div class="polaroid-caption">Dois meses de nós dois! 🍦❤️</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 8 (3 Months - Mar 23) -->
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content-wrapper">
+                        <div class="timeline-date">23 de Março de 2026</div>
+                        <div class="timeline-card polaroid">
+                            <div class="card-image-container">
+                                <img src="momento8.jpeg" alt="3 Meses de Namoro" class="card-image" loading="lazy" onclick="openLightbox(this)" onerror="this.style.opacity='0'; this.style.pointerEvents='none';">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">3 Meses - Bodas de Algodão-Doce</h3>
+                                <div class="card-editable-area">
+                                    <p class="card-text">Como o algodão doce, é na minha boca, doce e suave, assim você é para mim. É assim que o teu nome soa na minha boca, com doçura e carinho.</p>
+                                </div>
+                                <div class="polaroid-caption">O tempo passa voando ao seu lado! ☁️💗</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 9 (4 Months - Apr 23) -->
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content-wrapper">
+                        <div class="timeline-date">23 de Abril de 2026</div>
+                        <div class="timeline-card polaroid">
+                            <div class="card-image-container">
+                                <img src="momento9.jpeg" alt="4 Meses de Namoro" class="card-image" loading="lazy" onclick="openLightbox(this)" onerror="this.style.opacity='0'; this.style.pointerEvents='none';">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">4 Meses - Bodas de Pipoca</h3>
+                                <div class="card-editable-area">
+                                    <p class="card-text">Como a pipoca pula, assim é o meu coração quando estou com você! Ele fica agitado de tanta emoção e sentimentos de amor.</p>
+                                </div>
+                                <div class="polaroid-caption">Quatro meses de carinho sem fim 🍿❤️</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 10 (5 Months - May 23) -->
+                <!-- Timeline Item 10 -->
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content-wrapper">
+                        <div class="timeline-date">23 de Maio de 2026</div>
+                        <div class="timeline-card polaroid">
+                            <div class="card-image-container" id="upload-container-momento10">
+                                <img id="img-momento10" src="momento10.jpeg" alt="5 Meses de Namoro" class="card-image" loading="lazy" onclick="openLightbox(this)">
+                                <div class="photo-upload-overlay" id="upload-overlay-momento10">
+                                    <label for="file-upload-momento10" class="upload-btn">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                                            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                                            <circle cx="12" cy="13" r="4"/>
+                                        </svg>
+                                        <span>Tirar Foto na Hora 📸💖</span>
+                                    </label>
+                                    <input type="file" id="file-upload-momento10" accept="image/*" style="display: none;" onchange="handlePhotoUpload(event)">
+                                </div>
+                                <button class="change-photo-btn" id="change-photo-btn-momento10" onclick="triggerPhotoUpload(event)" style="display: none;">
+                                    <span>Alterar Foto 📷</span>
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">5 Meses - Bodas de Chocolate</h3>
+                                <div class="card-editable-area">
+                                    <p class="card-text">Nesse mês é um mês muito importante para mim, principalmente, por que é nele que eu vejo o nosso amor crescendo e se fortalecendo a cada dia. Mesmo com os desafios, nosso amor continua forte e verdadeiro. Obrigado por estar ao meu lado! em todos os momentos, principalmente nos mais diíceis, Te amo muiito meu amor, OBRIGADO, por me escolher nesses 5 meses.</p>
+                                </div>
+                                <div class="polaroid-caption">Bodas de Chocolate com meu AMORZI 🍫❤️</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 11 - SKY SYMBOL (Love goes until heaven / death do us part) -->
+                <div class="timeline-item sky-milestone reveal-center">
+                    <div class="timeline-dot sky-dot">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19.36 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.64-4.96z"/>
+                        </svg>
+                    </div>
+                    <div class="timeline-content-wrapper">
+                        <div class="timeline-date sky-badge">Para Sempre</div>
+                        <div class="timeline-card polaroid sky-card">
+                            <div class="sky-background-effect"></div>
+                            <div class="card-image-container">
+                                <img src="momento11.jpeg" alt="Até o Céu" class="card-image" loading="lazy" onclick="openLightbox(this)" onerror="this.style.opacity='0'; this.style.pointerEvents='none';">
+                                <div class="sky-stars-overlay"></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title sky-title">Nosso Amor até o Céu</h3>
+                                <p class="card-text">
+                                    Desde o primeiro dia, 06/09/2025, decidimos andar de mãos dadas. E hoje, temos a certeza de que esse sentimento não se limita ao agora. Nosso amor foi feito para durar, crescer, amadurecer e nos guiar até o fim das nossas vidas na Terra, continuando a brilhar até o dia em que formos morar juntos lá no céu. É de alma, para sempre.
+                                </p>
+                                <div class="polaroid-caption sky-caption">Até que a eternidade nos junte no céu... ☁️⭐❤️</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VARAL DE FOTOS (SCATTERED POLAROID GALLERY / JOGO PUZZLE) -->
+        <section class="gallery-section" id="puzzle-section">
+            <h2 class="section-title">Jogo do Nosso Amor: Monte a Frase 🧩</h2>
+            <p class="section-subtitle">Toque em uma foto e depois em outra para trocar suas posições. Organize as fotos na ordem correta (1 a 21) para revelar nossa frase secreta e ganhar seu prêmio!</p>
+            
+            <div class="clothesline-container">
+                <div class="clothesline-wire"></div>
+                
+                <!-- Polaroid Gallery Grid (will be shuffled and managed by JS) -->
+                <div class="polaroid-scattered-grid" id="puzzle-grid">
+                    <!-- Polaroid 1 -->
+                    <div class="polaroid-gallery-item" data-index="1" style="--rotation: -4deg;">
+                        <span class="polaroid-number">1</span>
+                        <img src="WhatsApp Image 2026-03-03 at 00.59.11.jpeg" alt="Te amo" loading="lazy">
+                        <div class="polaroid-gallery-caption">Te amo</div>
+                    </div>
+                    <!-- Polaroid 2 -->
+                    <div class="polaroid-gallery-item" data-index="2" style="--rotation: 3deg;">
+                        <span class="polaroid-number">2</span>
+                        <img src="WhatsApp Image 2026-03-03 at 00.59.12.jpeg" alt="mais que" loading="lazy">
+                        <div class="polaroid-gallery-caption">mais que</div>
+                    </div>
+                    <!-- Polaroid 3 -->
+                    <div class="polaroid-gallery-item" data-index="3" style="--rotation: -2deg;">
+                        <span class="polaroid-number">3</span>
+                        <img src="WhatsApp Image 2026-03-03 at 00.59.12 (1).jpeg" alt="ontem," loading="lazy">
+                        <div class="polaroid-gallery-caption">ontem,</div>
+                    </div>
+                    <!-- Polaroid 4 -->
+                    <div class="polaroid-gallery-item" data-index="4" style="--rotation: 5deg;">
+                        <span class="polaroid-number">4</span>
+                        <img src="WhatsApp Image 2026-03-03 at 00.59.12 (2).jpeg" alt="e menos" loading="lazy">
+                        <div class="polaroid-gallery-caption">e menos</div>
+                    </div>
+                    <!-- Polaroid 5 -->
+                    <div class="polaroid-gallery-item" data-index="5" style="--rotation: -3deg;">
+                        <span class="polaroid-number">5</span>
+                        <img src="WhatsApp Image 2026-03-03 at 00.59.12 (3).jpeg" alt="que amanhã." loading="lazy">
+                        <div class="polaroid-gallery-caption">que amanhã.</div>
+                    </div>
+                    <!-- Polaroid 6 -->
+                    <div class="polaroid-gallery-item" data-index="6" style="--rotation: 4deg;">
+                        <span class="polaroid-number">6</span>
+                        <img src="WhatsApp Image 2026-03-03 at 00.59.12 (4).jpeg" alt="e vou" loading="lazy">
+                        <div class="polaroid-gallery-caption">e vou</div>
+                    </div>
+                    <!-- Polaroid 7 -->
+                    <div class="polaroid-gallery-item" data-index="7" style="--rotation: -5deg;">
+                        <span class="polaroid-number">7</span>
+                        <img src="WhatsApp Image 2026-03-03 at 00.59.12 (5).jpeg" alt="te amar" loading="lazy">
+                        <div class="polaroid-gallery-caption">te amar</div>
+                    </div>
+                    <!-- Polaroid 8 -->
+                    <div class="polaroid-gallery-item" data-index="8" style="--rotation: 2deg;">
+                        <span class="polaroid-number">8</span>
+                        <img src="WhatsApp Image 2026-03-03 at 00.59.12 (8).jpeg" alt="mais ainda" loading="lazy">
+                        <div class="polaroid-gallery-caption">mais ainda</div>
+                    </div>
+                    <!-- Polaroid 9 -->
+                    <div class="polaroid-gallery-item" data-index="9" style="--rotation: -3deg;">
+                        <span class="polaroid-number">9</span>
+                        <img src="WhatsApp Image 2026-03-03 at 00.59.12 (9).jpeg" alt="cada dia" loading="lazy">
+                        <div class="polaroid-gallery-caption">cada dia</div>
+                    </div>
+                    <!-- Polaroid 10 -->
+                    <div class="polaroid-gallery-item" data-index="10" style="--rotation: 4deg;">
+                        <span class="polaroid-number">10</span>
+                        <img src="WhatsApp Image 2026-03-03 at 00.59.12 (10).jpeg" alt="que passar," loading="lazy">
+                        <div class="polaroid-gallery-caption">que passar,</div>
+                    </div>
+                    <!-- Polaroid 11 -->
+                    <div class="polaroid-gallery-item" data-index="11" style="--rotation: -2deg;">
+                        <span class="polaroid-number">11</span>
+                        <img src="WhatsApp Image 2026-03-03 at 00.59.12 (11).jpeg" alt="por que" loading="lazy">
+                        <div class="polaroid-gallery-caption">por que</div>
+                    </div>
+                    <!-- Polaroid 12 -->
+                    <div class="polaroid-gallery-item" data-index="12" style="--rotation: 3deg;">
+                        <span class="polaroid-number">12</span>
+                        <img src="WhatsApp Image 2026-03-03 at 00.59.12 (12).jpeg" alt="contigo" loading="lazy">
+                        <div class="polaroid-gallery-caption">contigo</div>
+                    </div>
+                    <!-- Polaroid 13 -->
+                    <div class="polaroid-gallery-item" data-index="13" style="--rotation: -4deg;">
+                        <span class="polaroid-number">13</span>
+                        <img src="WhatsApp Image 2026-03-03 at 00.59.12 (14).jpeg" alt="do lado," loading="lazy">
+                        <div class="polaroid-gallery-caption">do lado,</div>
+                    </div>
+                    <!-- Polaroid 14 -->
+                    <div class="polaroid-gallery-item" data-index="14" style="--rotation: 5deg;">
+                        <span class="polaroid-number">14</span>
+                        <img src="WhatsApp Image 2026-03-03 at 00.59.12 (15).jpeg" alt="o amor" loading="lazy">
+                        <div class="polaroid-gallery-caption">o amor</div>
+                    </div>
+                    <!-- Polaroid 15 -->
+                    <div class="polaroid-gallery-item" data-index="15" style="--rotation: -2deg;">
+                        <span class="polaroid-number">15</span>
+                        <img src="WhatsApp Image 2026-03-03 at 00.59.12 (16).jpeg" alt="é inevitável" loading="lazy">
+                        <div class="polaroid-gallery-caption">é inevitável</div>
+                    </div>
+                    <!-- Polaroid 16 -->
+                    <div class="polaroid-gallery-item" data-index="16" style="--rotation: 4deg;">
+                        <span class="polaroid-number">16</span>
+                        <img src="WhatsApp Image 2026-03-03 at 00.59.12 (17).jpeg" alt="e" loading="lazy">
+                        <div class="polaroid-gallery-caption">e</div>
+                    </div>
+                    <!-- Polaroid 17 -->
+                    <div class="polaroid-gallery-item" data-index="17" style="--rotation: -5deg;">
+                        <span class="polaroid-number">17</span>
+                        <img src="WhatsApp Image 2026-03-03 at 00.59.12 (18).jpeg" alt="irresistível," loading="lazy">
+                        <div class="polaroid-gallery-caption">irresistível,</div>
+                    </div>
+                    <!-- Polaroid 18 -->
+                    <div class="polaroid-gallery-item" data-index="18" style="--rotation: 3deg;">
+                        <span class="polaroid-number">18</span>
+                        <img src="WhatsApp Image 2026-03-03 at 00.59.12 (19).jpeg" alt="assim" loading="lazy">
+                        <div class="polaroid-gallery-caption">assim</div>
+                    </div>
+                    <!-- Polaroid 19 -->
+                    <div class="polaroid-gallery-item" data-index="19" style="--rotation: -3deg;">
+                        <span class="polaroid-number">19</span>
+                        <img src="WhatsApp Image 2026-03-03 at 00.59.12 (20).jpeg" alt="como" loading="lazy">
+                        <div class="polaroid-gallery-caption">como</div>
+                    </div>
+                    <!-- Polaroid 20 -->
+                    <div class="polaroid-gallery-item" data-index="20" style="--rotation: 4deg;">
+                        <span class="polaroid-number">20</span>
+                        <img src="WhatsApp Image 2026-03-03 at 00.59.12 (22).jpeg" alt="minha" loading="lazy">
+                        <div class="polaroid-gallery-caption">minha</div>
+                    </div>
+                    <!-- Polaroid 21 -->
+                    <div class="polaroid-gallery-item" data-index="21" style="--rotation: -4deg;">
+                        <span class="polaroid-number">21</span>
+                        <img src="WhatsApp Image 2026-03-03 at 00.59.12 (23).jpeg" alt="thuthuca! ❤️" loading="lazy">
+                        <div class="polaroid-gallery-caption">thuthuca! ❤️</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VALES DO AMOR SECTION (LOVE COUPONS) -->
+        <section id="coupons-section" class="coupons-section">
+            <h2 class="section-title">Vales do Nosso Amor</h2>
+            <p class="section-subtitle">Cupons especiais que você pode resgatar quando quiser! Toque para ver os detalhes e resgatar o seu presente.</p>
+            
+            <div class="coupons-scroll-container">
+                <div class="coupons-grid">
+                    <!-- Coupon 1 -->
+                    <div class="coupon-card" onclick="toggleCoupon(this)" id="coupon-massage">
+                        <div class="coupon-inner">
+                            <div class="coupon-front">
+                                <div class="coupon-tag">AMOR</div>
+                                <div class="coupon-icon">💆‍♀️</div>
+                                <h3 class="coupon-title">Vale Massagem</h3>
+                                <p class="coupon-tap-hint">Toque para revelar ✨</p>
+                            </div>
+                            <div class="coupon-back">
+                                <h3 class="coupon-back-title">Massagem & Cafuné</h3>
+                                <p class="coupon-description">Para aqueles dias cansativos em que você só precisa de um colo aconchegante e carinho infinito.</p>
+                                <button class="claim-btn" onclick="redeemCoupon(this, event, 'massage')">Resgatar Cupom</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Coupon 2 -->
+                    <div class="coupon-card" onclick="toggleCoupon(this)" id="coupon-dinner">
+                        <div class="coupon-inner">
+                            <div class="coupon-front">
+                                <div class="coupon-tag">ROMANCE</div>
+                                <div class="coupon-icon">🍝</div>
+                                <h3 class="coupon-title">Vale Jantar</h3>
+                                <p class="coupon-tap-hint">Toque para revelar ✨</p>
+                            </div>
+                            <div class="coupon-back">
+                                <h3 class="coupon-back-title">Jantar Romântico</h3>
+                                <p class="coupon-description">Direito a um jantar delicioso preparado com muito carinho, com o seu prato preferido e velas.</p>
+                                <button class="claim-btn" onclick="redeemCoupon(this, event, 'dinner')">Resgatar Cupom</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Coupon 3 -->
+                    <div class="coupon-card" onclick="toggleCoupon(this)" id="coupon-cinema">
+                        <div class="coupon-inner">
+                            <div class="coupon-front">
+                                <div class="coupon-tag">DIVERSÃO</div>
+                                <div class="coupon-icon">🍿</div>
+                                <h3 class="coupon-title">Vale Cinema</h3>
+                                <p class="coupon-tap-hint">Toque para revelar ✨</p>
+                            </div>
+                            <div class="coupon-back">
+                                <h3 class="coupon-back-title">Cinema & Pipoca</h3>
+                                <p class="coupon-description">Um dia para relembrarmos o nosso primeiro encontro, com direito a pipoca quentinha e muitos abraços.</p>
+                                <button class="claim-btn" onclick="redeemCoupon(this, event, 'cinema')">Resgatar Cupom</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Coupon 4 -->
+                    <div class="coupon-card" onclick="toggleCoupon(this)" id="coupon-dengo">
+                        <div class="coupon-inner">
+                            <div class="coupon-front">
+                                <div class="coupon-tag">DENGO</div>
+                                <div class="coupon-icon">🥺</div>
+                                <h3 class="coupon-title">Vale Chameguinho</h3>
+                                <p class="coupon-tap-hint">Toque para revelar ✨</p>
+                            </div>
+                            <div class="coupon-back">
+                                <h3 class="coupon-back-title">Dia de Carinho</h3>
+                                <p class="coupon-description">Um dia inteiro dedicado exclusivamente a te fazer carinho e te mimar, fazer todas as suas vontades e encher você de beijinhos.</p>
+                                <button class="claim-btn" onclick="redeemCoupon(this, event, 'dengo')">Resgatar Cupom</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BIS GENERATOR SECTION (REASONS OF LOVE) -->
+        <section id="bis-section" class="bis-section">
+            <div class="bis-wrapper">
+                <h2 class="section-title">Caixa de Lembretes do Nosso Amor</h2>
+                <p class="section-subtitle">Retire um Lembrete virtual para ler um dos motivos de eu ser completamente apaixonado por você!</p>
+                
+                <div class="bis-box-container glass-card">
+                    <!-- Heart Chest / Bis Box Visual representation -->
+                    <div class="bis-box-visual" id="bis-box-3d">
+                        <div class="bis-lid"></div>
+                        <div class="bis-body-box">
+                            <div class="bis-heart-glow"></div>
+                        </div>
+                    </div>
+
+                    <!-- Display Area for Reason -->
+                    <div class="reason-display-area">
+                        <p id="reason-text" class="reason-text-inactive">Clique no botão abaixo para retirar um carinho...</p>
+                    </div>
+
+                    <!-- Interactions & Counters -->
+                    <div class="bis-controls">
+                        <button id="get-reason-btn" class="glow-button btn-pulse">
+                            <span class="btn-text">Retirar um Lembrete </span>
+                        </button>
+                        
+                        <div class="bis-stats">
+                            <span>Bis consumidos: <strong id="bis-count">0</strong> / 30</span>
+                            <button id="reset-bis-btn" class="reset-button" title="Reiniciar Caixa">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FOOTER -->
+        <footer class="main-footer">
+            <p>Feito com todo o amor do mundo por você. ❤️</p>
+            <p class="footer-anniversary">Feliz 5 meses de namoro! (23/12/2025 - 23/05/2026)</p>
+        </footer>
+
+    </main>
+
+    <!-- LIGHTBOX MODAL FOR ENLARGING PHOTOS -->
+    <div id="lightbox" class="lightbox-modal" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content-wrapper" onclick="event.stopPropagation()">
+            <div class="lightbox-polaroid">
+                <img id="lightbox-img" src="" alt="Ampliada">
+                <div id="lightbox-caption" class="lightbox-caption"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- REWARD MODAL FOR PUZZLE COMPLETION -->
+    <div id="reward-modal" class="reward-modal">
+        <div class="reward-modal-backdrop" onclick="closeRewardModal()"></div>
+        <div class="reward-modal-content glass-card">
+            <div class="reward-heart-decoration">🎉💖😘</div>
+            <h2 class="reward-title">Parabéns, meu amor!</h2>
+            <p class="reward-message">Você organizou nosso varal de fotos e formou a frase completa!</p>
+            <div class="reward-prize-box">
+                <span class="reward-prize-icon">💋</span>
+                <p class="reward-prize-text">Você ganhou um Beijinho gostoso!</p>
+            </div>
+            <div class="reward-timer-container">
+                <span class="reward-timer-label">Resgate antes que o tempo acabe:</span>
+                <div class="reward-timer-clock" id="reward-timer-clock">10</div>
+                <span class="reward-timer-sub">segundos restantes!</span>
+            </div>
+            <button id="claim-kiss-btn" class="reward-claim-btn" onclick="claimKissReward()">
+                Resgatar Beijinho! 💋
+            </button>
+            <div id="reward-status-msg" class="reward-status-msg"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript logic -->
+    <script src="script.js"></script>
+</body>
+</html>
